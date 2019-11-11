@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kbc_set"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:onClick="goSetting"
+        android:visibility="gone"
+        android:id="@+id/iv_setting"
+        android:tint="@color/white"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:onClick="goInfo"
+        android:visibility="gone"
+        android:id="@+id/iv_info"
+        android:tint="@color/white"
+        android:src="@drawable/ic_info_black_24dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_play"
+        android:onClick="playNow"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="Let's Play"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
