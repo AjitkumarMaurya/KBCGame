@@ -29,6 +29,10 @@
             android:paddingBottom="?attr/actionBarSize"
             android:orientation="vertical">
 
+            <ImageView
+                android:src="@drawable/dev_img"
+                android:layout_width="160dp"
+                android:layout_height="80dp"/>
             <TextView
                 android:textStyle="bold"
                 android:layout_width="wrap_content"

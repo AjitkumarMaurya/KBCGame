@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv_profile;
     TextView tv_name;
     TextView tv_score;
-    int point=0;
+    String point="";
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -113,15 +113,15 @@ public class MainActivity extends AppCompatActivity {
 
         kbgQues = new ArrayList<>();
 
-        kbgQues.add(new DataGeneralGameKbg("2+2","1","2","3","4","4","100000"));
-        kbgQues.add(new DataGeneralGameKbg("3+5","9","8","7","5","8","500000"));
-        kbgQues.add(new DataGeneralGameKbg("1+7","8","7","6","5","8","1000000"));
-        kbgQues.add(new DataGeneralGameKbg("4-2","2","3","4","5","2","2500000"));
-        kbgQues.add(new DataGeneralGameKbg("8+4-1","10","11","12","13","11","5000000"));
-        kbgQues.add(new DataGeneralGameKbg("7-3+1","4","3","5","7","5","7500000"));
-        kbgQues.add(new DataGeneralGameKbg("8+7-9","3","4","5","6","6","10000000"));
-        kbgQues.add(new DataGeneralGameKbg("8+2-9","1","4","5","6","1","50000000"));
-        kbgQues.add(new DataGeneralGameKbg("9+7-9","3","7","5","6","7","70000000"));
+        kbgQues.add(new DataGeneralGameKbg("2+2","1","2","3","4","4","1,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("3+5","9","8","7","5","8","5,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("1+7","8","7","6","5","8","10,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("4-2","2","3","4","5","2","25,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("8+4-1","10","11","12","13","11","50,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("7-3+1","4","3","5","7","5","75,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("8+7-9","3","4","5","6","6","1,00,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("8+2-9","1","4","5","6","1","5,00,00,000"));
+        kbgQues.add(new DataGeneralGameKbg("9+7-9","3","7","5","6","7","7,00,00,000"));
 
         intCode();
 
@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         TextView iv_no = dialog.findViewById(R.id.iv_no);
 
         iv_yes.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -207,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 mProgressBar.setProgress(j);
 
                 if (tv.getText().toString().trim().equalsIgnoreCase(kbgQues.get(index).getAnswer().trim())){
-                    point = Integer.parseInt(kbgQues.get(index).getWinPoint());
+                    point = kbgQues.get(index).getWinPoint();
                     index++;
                     tv_score.setText(" ₹ "+point+" won");
 
@@ -329,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
         textPoint.setText(getResources().getString(R.string.yougot)+" "+point+"  "+getResources().getString(R.string.point));
 
         //tv_title.style(this,preferenceManager.getFontID());
-        tv_title.setText(getResources().getString(R.string.winner));
+        tv_title.setText(getResources().getString(R.string.right_ans));
 
         iv_play.setOnClickListener(new View.OnClickListener() {
             @Override

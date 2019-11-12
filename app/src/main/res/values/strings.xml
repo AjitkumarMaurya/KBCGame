@@ -5,13 +5,14 @@
     <string name="no">No</string>
 
 
-    <string name="wrongans">Oops! Wrong answer</string>
+    <string name="wrongans">Oops! Your answer is wrong</string>
 
     <string name="questionfinsh">Oops! no more questions</string>
+    <string name="right_ans">Congratulations \n your answer is correct! </string>
 
     <string name="winner">Winner \n you gave all answers correctly</string>
-    <string name="gotpoint">You got Rupee</string>
-    <string name="yougot">You got </string>
+    <string name="gotpoint">You won Rupee</string>
+    <string name="yougot">You won </string>
 
     <string name="replay">Replay</string>
     <string name="tap">Selected answer is wrong please choose next answer</string>
