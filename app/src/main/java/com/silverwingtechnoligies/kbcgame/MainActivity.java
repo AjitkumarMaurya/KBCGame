@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv_profile;
     TextView tv_name;
     TextView tv_score;
+
+
     String point="";
 
     @SuppressLint("SetTextI18n")
@@ -220,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
                         wrongAns();
 
                     }else {
-
                         flg=1;
                         Toast.makeText(MainActivity.this, getString(R.string.tap), Toast.LENGTH_SHORT).show();
                     }
@@ -464,6 +465,7 @@ public class MainActivity extends AppCompatActivity {
                         mcountDownTimer2.cancel();
                         player.pause();
                     }
+
                     Intent intent= getIntent();
                     finish();
                     startActivity(intent);
@@ -545,6 +547,7 @@ public class MainActivity extends AppCompatActivity {
                     mcountDownTimer2.cancel();
                     player.pause();
                 }
+
                 setFlip(question);
 
 
@@ -619,7 +622,7 @@ public class MainActivity extends AppCompatActivity {
     private void strat(){
 
 
-        mProgressBar.setProgress(j);
+       // mProgressBar.setProgress(j);
         player=MediaPlayer.create(this,R.raw.timer);
         wrongAnswer=MediaPlayer.create(this,R.raw.wrong_answer);
         rightAnswer=MediaPlayer.create(this,R.raw.kbc_winner);

@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        player=MediaPlayer.create(this,R.raw.timer);
+        //player=MediaPlayer.create(this,R.raw.timer);
 
         image = findViewById(R.id.image);
         tv_play = findViewById(R.id.tv_play);
